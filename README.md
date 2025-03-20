@@ -1,47 +1,31 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# 🚀 My Portfolio
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+Welcome to my portfolio! Here, you can explore my journey, projects, and skills in the field of software development.
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+## 📌 About Me
+I am an aspiring **Full Stack Java Developer** with a strong interest in **Java, Spring Boot, and Application Development**. I am also passionate about **Data Structures and Algorithms (DSA)** and actively preparing for **MAANG company interviews**. My goal is to master full-stack development and land a role in a top tech company.
 
-# Features
+## 🔧 Skills & Technologies
+- **Programming Languages:** Java, JavaScript, Python
+- **Backend Development:** Spring Boot, Hibernate, REST APIs
+- **Frontend Development:** React.js, Vite, HTML, CSS
+- **Databases:** MySQL, PostgreSQL
+- **Development Tools:** Git, GitHub, VS Code, IntelliJ IDEA
+- **Other Technologies:** Docker,CI/CD, Jenkins
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+## 📂 Projects
+### 🌐 Portfolio Website
+- Created a **personal portfolio website** using **React and Vite**.
+- Hosted the site using **Vercel** for a seamless user experience.
 
-# Getting Started Locally
+## 📈 My Goals
+- 📚 Master **Full Stack Java Development** for high-performance applications.
+- 🎯 Crack **MAANG interviews** by practicing **DSA on LeetCode**.
 
-1. Clone this repository to your local machine:
+## 📫 Connect with Me
+- **GitHub:** [Your GitHub Profile](https://github.com/Dheenadayalan-Dhanapal)
+- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/dheenadayalan24/)
+- **Leetcode:** [Your Leetcode Profile (if available)](https://leetcode.com/u/Dheena2402/)
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+Feel free to check out my projects and reach out for collaboration opportunities! 🚀
 
-2. Move to the cloned directory
-
-   ```bash
-   cd portfolio
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   pnpm install
-   ```
-
-4. Start the local Server:
-
-   ```bash
-   pnpm dev
-   ```
-
-5. Open the [Config file](./src/data/resume.tsx) and make changes
-
-# License
-
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
