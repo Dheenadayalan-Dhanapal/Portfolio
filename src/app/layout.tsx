@@ -1,52 +1,20 @@
-import Navbar from "@/components/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 
-const fontSans = FontSans({
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
-  title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
-  },
-  description: DATA.description,
-  openGraph: {
-    title: `${DATA.name}`,
-    description: DATA.description,
-    url: DATA.url,
-    siteName: `${DATA.name}`,
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  twitter: {
-    title: `${DATA.name}`,
-    card: "summary_large_image",
-  },
-  verification: {
-    google: "",
-    yandex: "",
-  },
+  title: "Dev Portfolio | Web Developer & CS Student",
+  description: "A high-performance personal portfolio built with Next.js, Tailwind CSS, and Framer Motion.",
 };
+
+import Sidebar from "@/components/Navbar"; // Note: It's actually Navbar, but let's stick to imports
+import GSAPCursor from "@/components/GSAPCursor";
+import SparkleTrail from "@/components/SparkleTrail";
 
 export default function RootLayout({
   children,
@@ -54,19 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
-          </TooltipProvider>
-        </ThemeProvider>
+    <html lang="en" className="dark">
+      <body className={`${outfit.variable} font-sans antialiased selection:bg-accent selection:text-white cursor-none`}>
+        <GSAPCursor />
+        <SparkleTrail />
+        {children}
       </body>
     </html>
   );

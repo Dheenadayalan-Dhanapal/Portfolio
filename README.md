@@ -1,31 +1,36 @@
-# 🚀 My Portfolio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Welcome to my portfolio! Here, you can explore my journey, projects, and skills in the field of software development.
+## Getting Started
 
-## 📌 About Me
-I am an aspiring **Full Stack Java Developer** with a strong interest in **Java, Spring Boot, and Application Development**. I am also passionate about **Data Structures and Algorithms (DSA)** and actively preparing for **MAANG company interviews**. My goal is to master full-stack development and land a role in a top tech company.
+First, run the development server:
 
-## 🔧 Skills & Technologies
-- **Programming Languages:** Java, JavaScript
-- **Backend Development:** Spring Boot, Hibernate, REST APIs
-- **Frontend Development:** React.js, HTML5, CSS3
-- **Databases:** MySQL, PostgreSQL
-- **Development Tools:** Git, GitHub, VS Code, IntelliJ IDEA
-- **Other Technologies:** Docker,CI/CD, Jenkins
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## 📂 Projects
-### 🌐 Portfolio Website
-- Created a **personal portfolio website** using **React**.
-- Hosted the site using **Vercel** for a seamless user experience.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📈 My Goals
-- 📚 Master **Full Stack Java Development** for high-performance applications.
-- 🎯 Crack **MAANG interviews** by practicing **DSA on LeetCode**.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 📫 Connect with Me
-- **GitHub:** [Github](https://github.com/Dheenadayalan-Dhanapal)
-- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/dheenadayalan24/)
-- **Leetcode:** [Leetcode](https://leetcode.com/u/Dheena2402/)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Feel free to check out my projects and reach out for collaboration opportunities! 🚀
+## Learn More
 
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

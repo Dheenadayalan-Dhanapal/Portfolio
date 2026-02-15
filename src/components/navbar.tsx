@@ -1,76 +1,40 @@
-import { Dock, DockIcon } from "@/components/magicui/dock";
-import { ModeToggle } from "@/components/mode-toggle";
-import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
-import { cn } from "@/lib/utils";
+"use client";
+
+import { motion } from "framer-motion";
+import { User, Briefcase, Mail, Home } from "lucide-react";
 import Link from "next/link";
+import Magnetic from "./Magnetic";
+
+const navItems = [
+    { name: "Home", href: "#home", icon: Home },
+    { name: "About", href: "#about", icon: User },
+    { name: "Projects", href: "#projects", icon: Briefcase },
+    { name: "Contact", href: "#contact", icon: Mail },
+];
 
 export default function Navbar() {
-  return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
-      <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
-      <Dock className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center px-1 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] ">
-        {DATA.navbar.map((item) => (
-          <DockIcon key={item.href}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href={item.href}
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
-                  )}
-                >
-                  <item.icon className="size-4" />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{item.label}</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon>
-        ))}
-        <Separator orientation="vertical" className="h-full" />
-        {Object.entries(DATA.contact.social)
-          .filter(([_, social]) => social.navbar)
-          .map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-        <Separator orientation="vertical" className="h-full py-2" />
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <ModeToggle />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Theme</p>
-            </TooltipContent>
-          </Tooltip>
-        </DockIcon>
-      </Dock>
-    </div>
-  );
+    return (
+        <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-fit">
+            <motion.div
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+                className="glass-morphism flex items-center gap-2 p-1.5 rounded-full px-6 shadow-[0_0_30px_rgba(0,0,0,0.5)] border-white/5"
+            >
+                {navItems.map((item) => (
+                    <Magnetic key={item.name}>
+                        <Link
+                            href={item.href}
+                            className="gsap-hover p-3 text-muted-foreground hover:text-foreground transition-colors relative group block"
+                        >
+                            <item.icon size={20} />
+                            <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-muted text-foreground text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-bold uppercase tracking-widest border border-white/5">
+                                {item.name}
+                            </span>
+                        </Link>
+                    </Magnetic>
+                ))}
+            </motion.div>
+        </nav>
+    );
 }
